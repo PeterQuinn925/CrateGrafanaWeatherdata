@@ -1,5 +1,7 @@
 # CrateGrafanaWeatherdata
-Extract data from Weewx and post via MQTT to Cratedb and view with Grafana
+
+Extract data from Weewx and post via MQTT to InfluxDB (not Cratedb) and view with Grafana
+I wanted to use Crate, but it was too difficult to get it going on a single Raspberry Pi, so I refocused on InfluxDB instead.
 
 mqtt_weather.py runs on Raspi 3 that contains Weewx. Weewx updates the SQLite db every 2 minutes with new data. This code reads the latest and posts it to MQTT topic Weather/data
 
