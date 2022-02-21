@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import sqlite3
 from sqlite3 import Error
 import datetime
@@ -6,7 +7,7 @@ import paho.mqtt.client as mqttClient
 import json
 
 Connected = False
-broker_address= "10.0.0.55"
+broker_address= "10.0.0.11"
 port = 1883
 client = mqttClient.Client("weatherdata")
 #client.connect(broker_address,port=port)
