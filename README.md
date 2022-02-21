@@ -12,6 +12,8 @@ add at the bottom:
    allow_anonymous true
 and restart mosquitto
 
-mqtt_subscribe runs on Raspi 4 and subscribes to the weather data topic. When complete, it will post the messages to InfluxDB
+mqtt_subscribe runs on Raspi 4 and subscribes to the weather data topic. It then posts the messages to InfluxDB
 
 Mosquitto is running on Raspi4, but it could be elsewhere.
+
+Install Grafana and connect it to the Influx instance on Raspi4. Use topic 'weather'
