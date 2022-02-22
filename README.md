@@ -19,3 +19,4 @@ Runs on Raspi 4 and subscribes to the weather data topic. It then posts the mess
 Mosquitto is running on Raspi4, but it could be elsewhere.
 
 Install Grafana and connect it to the Influx instance on Raspi4. Use topic 'weather'
+![image](https://user-images.githubusercontent.com/18488357/155051595-25dd9737-9b3a-451d-9fba-27756b9b2cdb.png)
