@@ -1,0 +1,5 @@
+plan to get pooltemp data into weewx
+write a service to subscribe to the weather/pooltemp topic and push the latest data into a file
+Update the weewx driver to look for this file and post the data into the right fields when it processes a loop
+
+Update the inside temp device to use MQTT and the same mechanism
