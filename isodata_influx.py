@@ -17,7 +17,7 @@ influxdb_client.switch_database(INFLUXDB_DATABASE)
 iso = isodata.get_iso('caiso')
 caiso = iso()
 i = 1
-max = 10000 #debugging
+max = 10000 #debugging - this is stupid, really. I forgot to increment i !!! Fix it next time I edit this file
 while i < max:
    result = caiso.get_latest_fuel_mix()
    fields = {}
