@@ -16,17 +16,18 @@ influxdb_client.switch_database(INFLUXDB_DATABASE)
 
 iso = isodata.get_iso('caiso')
 caiso = iso()
-i = 1
-max = 10000 #debugging - this is stupid, really. I forgot to increment i !!! Fix it next time I edit this file
-while i < max:
+while True:
    result = caiso.get_latest_fuel_mix()
    fields = {}
+   total = 0
    for fuel in result.mix.T:
         fields[fuel] = result.mix.at[fuel,'MW']
         if  pandas.isnull(fields[fuel]) : fields[fuel]=0
+        total = total + fields[fuel]
+   fields["Total"] = total
    ts =  result.time.to_pydatetime()
-   print (ts)
-   print (fields)
+   #print (ts)
+   #print (fields)
    tags = {'foo':'none'}
    influx_msg = [{'measurement': 'electricity','fields':fields, 'name':'observation', 'tags':tags,'time':ts}]
    try:
