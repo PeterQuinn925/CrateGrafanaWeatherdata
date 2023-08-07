@@ -12,8 +12,8 @@ from cognite.client.data_classes import TimeSeries
 
 host = "https://westeurope-1.cognitedata.com"
 myproject = "rok-buandcollaborators-53"
-clientid = "HXoBmEBgNkabcE17x1mAiYSa0EsoCa9i"
-secret = "TRoPillseuCknmcJlF6HMdtgFGoWorogluVKzagUR-BztIZeokZlgzt6VEKDtgNR"
+clientid = "HXoBmEbgNkabcE17x1mAiYSaxyzoCa9i"
+secret = "TRoPillseuCknmcJlF6HMdtgFgoWorogluVKzagUR-BztIZeokZlgztxyzKDtgNR"
 #myscope = "https://westeurope-1.cognitedata.com/.default"
 myscope='["IDENTITY", "user_impersonation"]'
 token="https://datamosaix-prod.us.auth0.com/oauth/token"
