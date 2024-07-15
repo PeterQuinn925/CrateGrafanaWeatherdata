@@ -17,6 +17,7 @@ INFLUXDB_DATABASE = 'weather'
 influxdb_client = InfluxDBClient(INFLUXDB_ADDRESS, 8086, INFLUXDB_USER, INFLUXDB_PASSWORD, None)
 influxdb_client.switch_database(INFLUXDB_DATABASE)
 
+#Cognite data part is no longer used. It still should work if you have proper credentials
 host = "https://az-eastus-1.cognitedata.com/"
 myproject = "rockwell-demo"
 tenant = "e2d0f0a5-fc45-414a-b012-0540e46a2d88"
