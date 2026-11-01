@@ -22,3 +22,19 @@ Mosquitto is running on Raspi4, but it could be elsewhere.
 
 Install Grafana and connect it to the Influx instance on Raspi4. Use topic 'weather'
 ![image](https://user-images.githubusercontent.com/18488357/155051595-25dd9737-9b3a-451d-9fba-27756b9b2cdb.png)
+
+DST:
+The server listens on 10.0.0.11 port 8000, so the base URL is http://10.0.0.11:8000.
+
+Get the DST status
+
+http://10.0.0.11:8000/api/dst
+
+Returns something like {"dst": 1}.
+
+Set the DST status
+
+http://10.0.0.11:8000/api/setdst/0     (standard time)
+http://10.0.0.11:8000/api/setdst/1     (daylight saving time)
+
+Returns something like {"DST": "0"}.
